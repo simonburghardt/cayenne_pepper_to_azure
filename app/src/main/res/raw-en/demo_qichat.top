@@ -7,3 +7,5 @@ u:(~hello) ~hello
 
 # Replying to speech
 u:("who is Emile") Emile made this app
+
+u:("wer ist der coolste?") Simon ist der coolste

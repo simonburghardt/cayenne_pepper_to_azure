@@ -5,13 +5,13 @@ import com.aldebaran.qi.sdk.QiContext
 import com.aldebaran.qi.sdk.`object`.conversation.*
 import com.aldebaran.qi.sdk.`object`.locale.Locale
 import okhttp3.MediaType
+import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody
-import okhttp3.OkHttpClient
 import org.json.JSONObject
 import java.io.IOException
 
-const val QNA_HOST = "https://pepperqna.azurewebsites.net/qnamaker"
+const val QNA_HOST = "https://cayennepepperbot.azurewebsites.net"
 
 class QnAChatbot internal constructor(context: QiContext?) : BaseChatbot(context) {
     val JSON = MediaType.parse("application/json; charset=utf-8")

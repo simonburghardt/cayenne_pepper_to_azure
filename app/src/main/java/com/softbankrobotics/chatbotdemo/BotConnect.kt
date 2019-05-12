@@ -11,7 +11,7 @@ class BotConnect private constructor() {
     init {
         Log.d(TAG, "Initializing BotConnect singleton")
         directLineBot = DirectLineChatbot(CHATLINE_SECRET)
-        /*
+
         directLineBot.start(object : DirectLineChatbot.Callback {
             override fun onStarted() {
                 Log.d("CHATBOT", "Started")
@@ -22,7 +22,7 @@ class BotConnect private constructor() {
                 Log.d("CHATBOT", message)
             }
         })
-        */
+
     }
 
     fun answerTo(question: String): String {

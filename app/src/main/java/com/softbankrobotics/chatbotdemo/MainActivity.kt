@@ -33,23 +33,29 @@ class MainActivity : RobotActivity(), RobotLifecycleCallbacks {
                 .withText("Getting ready to chat")
                 .build()
         say.run()
+
+
         val topic = TopicBuilder.with(qiContext)
                 .withResource(R.raw.demo_qichat)
                 .build()
         // Create a new QiChatbot.
         Log.i("TAG", "Create qichatbot")
+
+
         val qiChatbot = QiChatbotBuilder.with(qiContext)
                 .withTopic(topic)
                 .build()
         // Create a new Chatbot to handle Azure chatbot
+
+
         if (this.qiContext != null) {
-            //val azureChatbot = AzureChatbot(this.qiContext)
+            val azureChatbot = AzureChatbot(this.qiContext)
             val qnAChatbot = QnAChatbot(this.qiContext)
             // Create a new Chat action.
             Log.i("TAG", "Create chat action")
             chat = ChatBuilder.with(qiContext)
-                    //.withChatbot(azureChatbot)
-                    .withChatbot(qiChatbot, qnAChatbot)
+                    .withChatbot(azureChatbot)
+                    //.withChatbot(qiChatbot, qnAChatbot)
                     .build()
             chat?.async()?.run()
             Log.i("TAG", "Async run started...")
