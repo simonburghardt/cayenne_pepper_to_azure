@@ -8,6 +8,7 @@ import com.aldebaran.qi.sdk.`object`.locale.Locale
 class AzureChatbot internal constructor(context: QiContext?) : BaseChatbot(context) {
     override fun replyTo(phrase: Phrase, locale: Locale): StandardReplyReaction? {
         if (phrase.text.isNotEmpty()){
+            Log.d(TAG, "executedReplyTo")
             val botConnect = BotConnect.instance
             val aiResponse = botConnect.answerTo(phrase.text)
             // Return a reply built from the agent's response
@@ -19,9 +20,9 @@ class AzureChatbot internal constructor(context: QiContext?) : BaseChatbot(conte
     /**
      * Build a reply that can be processed by our chatbot
      */
-    private fun replyFromAIResponse(response: AIResponse): StandardReplyReaction {
-        Log.d(TAG, "replyFromAIResponse")
-        Log.d(TAG, "answer: $response")
+     private fun replyFromAIResponse(response: AIResponse): StandardReplyReaction {
+        Log.d(TAG, "replyFromAIResponseAZURE")
+        Log.d(TAG, "answerAZURE: $response")
         val reaction: BaseChatbotReaction = ChatbotUtteredReaction(qiContext, response)
 
         // Make the reply and return it

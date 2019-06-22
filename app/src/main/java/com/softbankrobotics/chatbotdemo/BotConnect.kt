@@ -5,8 +5,8 @@ import com.smartnsoft.directlinechatbot.DirectLineChatbot
 
 val TAG = "ChatbotDemoBotConnect"
 
-class BotConnect private constructor() {
-    private val directLineBot : DirectLineChatbot
+class BotConnect public constructor() {
+    private val directLineBot: DirectLineChatbot
 
     init {
         Log.d(TAG, "Initializing BotConnect singleton")
@@ -42,5 +42,6 @@ class BotConnect private constructor() {
     companion object {
         val instance = BotConnect()
     }
-}
 
+
+}

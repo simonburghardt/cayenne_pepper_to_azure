@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ChatbotDemo</string>
+    <string name="title_activity_pepper">PepperActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="testDisplay">hallo bro</string>
+    <string name="request_answer">Request Answer</string>
+    <string name="show_request">Show Request</string>
+
 </resources>
